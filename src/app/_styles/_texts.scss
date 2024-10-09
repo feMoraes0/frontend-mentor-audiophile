@@ -1,0 +1,62 @@
+%title {
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &-1 {
+    font-size: 56px;
+    letter-spacing: 2px;
+    line-height: 58px;
+  }
+
+  &-2 {
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    line-height: 44px;
+  }
+
+  &-3 {
+    font-size: 32px;
+    letter-spacing: 1.15px;
+    line-height: 36px;
+  }
+
+  &-4 {
+    font-size: 28px;
+    letter-spacing: 1.7px;
+    line-height: 38px;
+  }
+
+  &-5 {
+    font-size: 24px;
+    letter-spacing: 1.7px;
+    line-height: 33px;
+  }
+
+  &-6 {
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    line-height: 24px;
+  }
+
+  &-sub {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+}
+
+%text {
+  &-overline {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    line-height: 19px;
+    text-transform: uppercase;
+  }
+
+  &-body {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
+  }
+}
