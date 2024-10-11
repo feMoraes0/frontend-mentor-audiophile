@@ -1,0 +1,37 @@
+@use "../../_styles/texts";
+@use "../../_styles/_colors";
+
+.header {
+  width: 100%;
+  @extend %background-orange;
+  padding-bottom: 20px;
+
+  &__navbar {
+    padding: 32px 0 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__divider {
+      width: 100%;
+      height: 1px;
+      opacity: 0.2;
+      @extend %background-white;
+    }
+
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 34px;
+
+      &__item {
+        @extend %title;
+        @extend %title-sub;
+        @extend %color-white;
+        cursor: pointer;
+      }
+    }
+  }
+}
