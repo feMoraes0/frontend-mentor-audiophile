@@ -1,34 +1,33 @@
-@use "../../_styles/_texts";
 @use "../../_styles/_colors";
 
 .header {
+  background-color: colors.$light-black;
   width: 100%;
-  background-color: colors.$black;
 
-  &__navbar {
-    padding: 32px 0;
+  .navbar {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    padding: 32px 24px;
 
-    &__menu {
+    .menuIcon {
+      cursor: pointer;
       display: initial;
+    }
+
+    .logo {
       cursor: pointer;
     }
 
-    &__logo {
-      cursor: pointer;
-    }
-
-    &__divider {
-      width: 100%;
+    .divider {
+      background-color: colors.$white;
       height: 1px;
       opacity: 0.2;
-      background-color: colors.$white;
+      width: 100%;
     }
 
-    &__list {
+    .list {
       display: none;
     }
   }
@@ -36,19 +35,19 @@
 
 @media (min-width: 768px) {
   .header {
-    &__navbar {
+    .navbar {
       position: relative;
 
-      &__menu {
+      .menuIcon {
         display: initial;
       }
 
-      &__logo {
+      .logo {
         position: absolute;
         left: 58px;
       }
 
-      &__list {
+      .list {
         display: none;
       }
     }
@@ -57,27 +56,35 @@
 
 @media (min-width: 1440px) {
   .header {
-    &__navbar {
+    .navbar {
       padding: 32px 0 36px;
 
-      &__menu {
+      .menuIcon {
         display: none;
       }
 
-      &__logo {
+      .logo {
         position: relative;
       }
 
-      &__list {
-        list-style: none;
+      .list {
         display: flex;
         flex-direction: row;
         gap: 34px;
+        list-style: none;
 
-        &__item {
-          @include texts.title_sub;
+        &Item {
           color: colors.$white;
           cursor: pointer;
+          font-size: 13px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          line-height: 25px;
+          text-transform: uppercase;
+
+          &:hover {
+            color: colors.$orange;
+          }
         }
       }
     }
