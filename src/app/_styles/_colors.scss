@@ -1,19 +1,8 @@
-$colors: (
-  "white": #FFFFFF,
-  "black": #000000,
-  "light-black": #101010,
-  "gray": #F1F1F1,
-  "light-gray": #FAFAFA,
-  "orange": #D87D4A,
-  "light-orange": #FBAF85,
-);
 
-@each $color, $hex in $colors {
-  %color-#{$color} {
-    color: #{$hex};
-  }
-
-  %background-#{$color} {
-    background-color: #{$hex};
-  }
-}
+$white: #FFFFFF;
+$black: #000000;
+$light-black: #101010;
+$gray: #F1F1F1;
+$light-gray: #FAFAFA;
+$orange: #D87D4A;
+$light-orange: #FBAF85;

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './style.module.scss';
+import styles from '@components/Header/style.module.scss';
 import Image from 'next/image';
-import Container from '../Container';
+import Container from '@components/Container';
 
 type HeaderType = {
   children?: Readonly<React.ReactNode>
@@ -12,7 +12,8 @@ const Header = ({ children }: HeaderType)  => {
     <header className={styles.header}>
       <Container>
         <nav className={styles.header__navbar}>
-          <Image src="/images/audiophile.png" alt="logo" width={143} height={25} />
+          <Image className={styles.header__navbar__menu} src="/icons/menu.svg" alt="menu" width="16" height="15"/>
+          <Image className={styles.header__navbar__logo} src="/images/audiophile.png" alt="logo" width="143" height="25" />
           <ul className={styles.header__navbar__list}>
             <li className={styles.header__navbar__list__item}>Home</li>
             <li className={styles.header__navbar__list__item}>Headphones</li>
