@@ -7,11 +7,11 @@
     background-position-x: 0;
     background-position-y: 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 510px;
+    padding: 126px 0 112px;
     position: relative;
     width: 100%;
 
@@ -58,6 +58,61 @@
       line-height: auto;
       padding: 15px 31px;
       text-transform: uppercase;
+
+      &:hover {
+        background-color: colors.$light-orange;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px)  {
+  .home {
+    .header {
+      background-image: url("/images/headset-tablet.png");
+      background-position: center;
+      padding: 126px 0 167px;
+
+      &Title {
+        font-size: 56px;
+        letter-spacing: 2px;
+        line-height: 58px;
+        max-width: 60%;
+        text-align: center;
+      }
+
+      &Subtitle {
+        margin-bottom: 24px;
+      }
+
+      &Content {
+        padding: 0;
+        max-width: 50%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .home {
+    .header {
+      align-items: flex-start;
+      background-image: url("/images/headset-desktop.png");
+      background-size: contain;
+      background-position-y: top;
+      background-position-x: right;
+      padding: 128px 0 158px;
+
+      &Title {
+        max-width: 50%;
+        text-align: left;
+      }
+
+      &Content {
+        text-align: left;
+        max-width: 32%;
+      }
     }
   }
 }
