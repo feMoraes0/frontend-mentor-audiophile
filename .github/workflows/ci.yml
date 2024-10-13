@@ -1,0 +1,44 @@
+name: Run and Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    - name: Install dependencies
+      run: npm install
+    - name: Build
+      run: npm run build
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    - name: Install dependencies
+      run: npm install
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v20
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}  # Set this in GitHub Secrets
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Set this in GitHub Secrets
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Set this in GitHub Secrets
+        working-directory: ./  # Adjust if your project is in a subdirectory
