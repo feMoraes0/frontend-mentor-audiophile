@@ -19,6 +19,8 @@
   "rules":  {
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/jsx-one-expression-per-line": [2, { "allow": "none"}],
-    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }]
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "import/no-unresolved": [2, { "ignore": "*.png" }],
+    "react/require-default-props": "off"
   }
 }
