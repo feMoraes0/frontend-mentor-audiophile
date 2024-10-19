@@ -1,6 +1,11 @@
 import React from 'react';
 import Header from '@components/Header';
+import Container from '@components/Container';
 import styles from '@pages/home/page.module.scss';
+import Image from 'next/image';
+import HeadphonesShoppingImg from '@public/images/shopping/headphones.png';
+import EarphonesShoppingImg from '@public/images/shopping/earphones.png';
+import SpeakersShoppingImg from '@public/images/shopping/speakers.png';
 
 const HomePage = () => (
   <main className={styles.home}>
@@ -21,6 +26,53 @@ const HomePage = () => (
         </button>
       </div>
     </Header>
+    <Container className={styles.shopping}>
+      <article className={styles.shopping_item}>
+        <Image
+          src={HeadphonesShoppingImg}
+          alt="headphones"
+          className={styles.shopping_item_image}
+        />
+        <div className={styles.shopping_item_content}>
+          <h3 className={styles.shopping_item_content_title}>
+            Headphones
+          </h3>
+          <a href="/" className={styles.shopping_item_content_link}>
+            Shop
+          </a>
+        </div>
+      </article>
+      <article className={styles.shopping_item}>
+        <Image
+          src={SpeakersShoppingImg}
+          alt="speaker"
+          className={styles.shopping_item_image}
+        />
+        <div className={styles.shopping_item_content}>
+          <h3 className={styles.shopping_item_content_title}>
+            Speakers
+          </h3>
+          <a href="/" className={styles.shopping_item_content_link}>
+            Shop
+          </a>
+        </div>
+      </article>
+      <article className={styles.shopping_item}>
+        <Image
+          src={EarphonesShoppingImg}
+          alt="earphones"
+          className={styles.shopping_item_image}
+        />
+        <div className={styles.shopping_item_content}>
+          <h3 className={styles.shopping_item_content_title}>
+            Earphones
+          </h3>
+          <a href="/" className={styles.shopping_item_content_link}>
+            Shop
+          </a>
+        </div>
+      </article>
+    </Container>
   </main>
 );
 
