@@ -15,7 +15,7 @@
     position: relative;
     width: 100%;
 
-    &Title {
+    &_title {
       color: colors.$white;
       font-size: 36px;
       font-weight: 700;
@@ -26,7 +26,7 @@
       text-transform: uppercase;
     }
 
-    &Subtitle {
+    &_subtitle {
       color: colors.$white;
       font-size: 14px;
       font-weight: 400;
@@ -37,7 +37,7 @@
       text-transform: uppercase;
     }
 
-    &Content {
+    &_content {
       color: colors.$white;
       font-size: 15px;
       letter-spacing: 0;
@@ -48,7 +48,7 @@
       text-align: center;
     }
 
-    &Button {
+    &_button {
       background-color: colors.$orange;
       border: none;
       color: colors.$white;
@@ -73,7 +73,7 @@
       background-position: center;
       padding: 126px 0 167px;
 
-      &Title {
+      &_title {
         font-size: 56px;
         letter-spacing: 2px;
         line-height: 58px;
@@ -81,11 +81,11 @@
         text-align: center;
       }
 
-      &Subtitle {
+      &_subtitle {
         margin-bottom: 24px;
       }
 
-      &Content {
+      &_content {
         padding: 0;
         max-width: 50%;
         margin-bottom: 40px;
@@ -104,12 +104,12 @@
       background-position-x: right;
       padding: 128px 0 158px;
 
-      &Title {
+      &_title {
         max-width: 50%;
         text-align: left;
       }
 
-      &Content {
+      &_content {
         text-align: left;
         max-width: 32%;
       }

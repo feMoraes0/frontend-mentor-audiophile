@@ -7,7 +7,7 @@ type ContainerType = {
 }
 
 const Container = ({ children, fullwidth = false }: ContainerType) => (
-  <div className={`${styles.container} ${fullwidth ? styles.containerFluid : ''}`}>
+  <div className={`${styles.container} ${fullwidth ? styles.container_fluid : ''}`}>
     { children }
   </div>
 );

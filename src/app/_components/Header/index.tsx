@@ -14,16 +14,16 @@ const Header = ({ children = null }: HeaderType) => (
         <Image className={styles.menuIcon} src="/icons/menu.svg" alt="menu" width="16" height="15" />
         <Image className={styles.logo} src="/images/audiophile.png" alt="logo" width="143" height="25" />
         <ul className={styles.list}>
-          <li className={styles.listItem}>
+          <li className={styles.list_item}>
             Home
           </li>
-          <li className={styles.listItem}>
+          <li className={styles.list_item}>
             Headphones
           </li>
-          <li className={styles.listItem}>
+          <li className={styles.list_item}>
             Speakers
           </li>
-          <li className={styles.listItem}>
+          <li className={styles.list_item}>
             Earphones
           </li>
         </ul>
